@@ -786,16 +786,18 @@ function clean_refresh(text, force, history_step) {
 function load() {
     //initialize map object
     map = new L.map(document.getElementById('map'), {
-        zoom: 5,
+        zoom: 8,
         zoomControl: false,
         zoomAnimationThreshold: 0,
-        center: [53.467511,-2.233894],
+        center: [37.64,-122.06],
         layers: baseMaps[selectedLayer],
         worldCopyJump: true,
         preferCanvas: true,
     });
 
-    map.setView([53.467511,-2.233894], 5, {animate: false});
+    // TODO: Default to users region, patched to SF Bay default, zoom to 8 (5 default)
+
+    map.setView([37.64,-122.06], 8, {animate: false});
 
     // fullscreen button
     map.addControl(new L.Control.Fullscreen({ position: 'bottomleft' }));
