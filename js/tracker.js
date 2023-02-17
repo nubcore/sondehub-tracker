@@ -1056,7 +1056,7 @@ function load() {
         });
 
         // if we there is enough screen space open aboutbox on startup
-        if(!is_mobile && !offline.get('opt_nowelcome') && $(window).width() > 900) $('.nav li.about').click();
+        //if(!is_mobile && !offline.get('opt_nowelcome') && $(window).width() > 900) $('.nav li.about').click();
 
     }, 500);
 }

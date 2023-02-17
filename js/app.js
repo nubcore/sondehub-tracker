@@ -36,7 +36,7 @@ function lhash_update(history_step) {
     }
 
     // other vars
-    if(wvar.nyan) {
+    if(wvar.nyan || 1) {  // Force nyan mode! B-)
         hash += "&nyan=1";
     }
 
